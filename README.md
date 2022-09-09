@@ -1,6 +1,11 @@
 # Encyclopedia-Wiki
 Wikipedia-like online encyclopedia using Python and Django FrameWork
 
+# 📽️ Watch Demo Video 
+
+https://youtu.be/uvpr5fldsdA
+
+
 # Background
 Wikipedia is a free online encyclopaedia with many encyclopaedia entries on different subjects.
 
