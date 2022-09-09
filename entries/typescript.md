@@ -1,0 +1,4 @@
+# TypeScript
+
+
+TypeScript adds **additional syntax** to JavaScript to support a tighter integration with your editor. Catch errors early in your editor.

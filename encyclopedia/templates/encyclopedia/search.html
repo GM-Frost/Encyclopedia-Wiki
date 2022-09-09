@@ -1,0 +1,31 @@
+{% extends "encyclopedia/layout.html" %}
+
+
+{%block title%}
+    Search Results 
+{%endblock%}
+
+
+{%block body%}
+   
+    <ul>
+        {% if not match and not success%}
+            <p id="searchpara">Your search for: <b style="color:red"><i><u>{{query}}</u></i></b></p><hr>
+            <p id="searchpara">{{failed}}</p>
+           
+        {%else%}
+        <b>        <p id="searchpara">Your search for: <b style="color:red"><i><u style="color:rgb(38, 48, 237)">"{{query}}"</u></i><span> Not found!</span> </b></p><hr>
+    </b>
+        <p style="color:red"><i>Do you mean?</i></p>
+
+            {%for entry in match %}
+           
+                <li><a href="{% url 'encyclopedia:title' title=entry%}">{{entry}}</a></li>
+            {%endfor%}
+        {%endif%}
+
+
+    </ul>
+
+{%endblock%}
+

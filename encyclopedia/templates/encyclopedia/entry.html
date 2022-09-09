@@ -1,0 +1,25 @@
+{% extends "encyclopedia/layout.html" %}
+
+
+{%block title%}
+ Encyclopedia - {{title}}
+
+{%endblock%}
+
+{% block body%}
+
+    {% if success%}
+        {{body | safe}}
+       <form method="GET" action="{%url 'encyclopedia:edit' title=title%}">
+            <input type="submit" value="Edit">
+       </form>
+        
+    {% else %}
+
+        <h1 style="color: red;">{{title}} ❌</h1>
+        <hr>
+        <p> <b>{{error_query}}</b><u><i style="color: rgb(195, 28, 61); font-size: 1.1em;"><b>'{{query}}'</b></i></u></p>
+        <p style="color: red;"><u><i>{{body}}:</i></u></p>
+    {% endif %}
+
+{%endblock%}
